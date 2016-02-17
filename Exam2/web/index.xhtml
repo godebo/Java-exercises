@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Email Address Solicitor</title>
+    </h:head>
+    <h:body>
+        <h1>Enter your email address and win a gift</h1>
+        <h:form>
+                <h:inputText value="#{collectorBB.userDetail.emailAddress}">
+                    <f:passThroughAttribute name="placeholder" value="Email address"/>
+                </h:inputText>
+            <h2>Gift I like to win</h2>
+                <h:selectOneRadio value="#{collectorBB.userDetail.giftChoice}">
+                        <f:selectItem itemValue="gift1" itemLabel="Gift1"/>
+                        <f:selectItem itemValue="gift2" itemLabel="Gift2"/>
+                        <f:selectItem itemValue="gift3" itemLabel="Gift3"/>
+                </h:selectOneRadio>
+                <h:commandButton action="#{collectorBB.addUserDetail()}" value="Enter"/>
+        </h:form>
+    </h:body>
+</html>
+

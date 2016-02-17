@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Sign-up and Remove Page</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columnClasses="2">
+                <h:inputText value="#{subscriptionBB.student.studentID}">
+                    <f:passThroughAttribute name="placeholder" value="Student ID"/>
+                </h:inputText>
+                <h:commandButton action="#{subscriptionBB.remove()}" value="Remove">
+                </h:commandButton>
+            </h:panelGrid>
+        </h:form>
+        
+       <h:form>
+            <h:panelGrid columnClasses="4">
+                <h:inputText value="#{subscriptionBB.student.studentID}">
+                    <f:passThroughAttribute name="placeholder" value="Student ID"/>
+                </h:inputText>
+                <h:inputText value="#{subscriptionBB.student.studentGroup}">
+                    <f:passThroughAttribute name="placeholder" value="Student Group"/>
+                </h:inputText>
+                <h:inputText value="#{subscriptionBB.student.firstName}">
+                    <f:passThroughAttribute name="placeholder" value="First Name"/>
+                </h:inputText>
+                <h:inputText value="#{subscriptionBB.student.lastName}">
+                    <f:passThroughAttribute name="placeholder" value="Last Name"/>
+                </h:inputText>
+                <h:commandButton action="#{subscriptionBB.signUp()}" value="Sign-up"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
